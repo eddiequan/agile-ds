@@ -3,6 +3,7 @@ require 'rails_helper'
 feature 'Sign-up management' do
   scenario 'New User signs up' do
     visit '/'
+
     click_link 'Register'
 
     fill_in 'Email', with: 'test2@test.com'
