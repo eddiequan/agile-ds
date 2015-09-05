@@ -45,7 +45,11 @@ group :development, :test do
   gem 'spring'
 
   gem 'capybara'
-  
+
+end
+
+group :test do
+  gem 'factory_girl_rails'
 end
 
 gem "rspec-rails", :group => [:development, :test]
