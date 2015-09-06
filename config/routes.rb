@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
-  root 'pages#home'
+  root 'iterations#index'
   resources :user_sessions
   resources :users
+  resources :iterations
 
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout

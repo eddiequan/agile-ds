@@ -11,18 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150905174746) do
+ActiveRecord::Schema.define(version: 20150906173600) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "iterations", force: :cascade do |t|
-    t.integer "number"
     t.integer "points_done"
     t.integer "points_done_for_release"
     t.integer "points_planned"
     t.integer "defects_completed"
     t.integer "defects_incomplete"
+    t.date    "date"
   end
 
   create_table "users", force: :cascade do |t|
