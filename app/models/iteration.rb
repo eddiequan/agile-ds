@@ -1,5 +1,6 @@
 class Iteration < ActiveRecord::Base
 
+  validates :user_id, {presence: true}
   validates :date, {presence: true}
   validates :points_done, {presence: true}
   validates :points_done_for_release, {presence: true}
