@@ -1,0 +1,38 @@
+<%= form_for(@iteration) do |f| %>
+  <% if @iteration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@iteration.errors.count, "error") %> prohibited this iteration from being saved:</h2>
+
+      <ul>
+      <% @iteration.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :points_done %><br>
+    <%= f.text_field :points_done %>
+  </div>
+  <div class="field">
+    <%= f.label :points_done_for_release %><br />
+    <%= f.password_field :points_done_for_release %>
+  </div>
+  <div class="field">
+    <%= f.label :points_planned %><br />
+    <%= f.password_field :points_planned %>
+  </div>
+  <div class="field">
+    <%= f.label :defects_completed %><br />
+    <%= f.password_field :defects_completed %>
+  </div>
+  <div class="field">
+    <%= f.label :defects_incomplete %><br />
+    <%= f.password_field :defects_incomplete %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Add" %>
+  </div>
+
+<% end %>
