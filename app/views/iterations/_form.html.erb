@@ -10,26 +10,30 @@
       </ul>
     </div>
   <% end %>
-
+    
   <div class="field">
-    <%= f.label :points_done %><br>
+    <%= f.label :date %><br />
+    <%= f.date_field :date%>
+  </div>  
+  <div class="field">
+    <%= f.label :points_done %><br />
     <%= f.text_field :points_done %>
   </div>
   <div class="field">
     <%= f.label :points_done_for_release %><br />
-    <%= f.password_field :points_done_for_release %>
+    <%= f.text_field :points_done_for_release %>
   </div>
   <div class="field">
     <%= f.label :points_planned %><br />
-    <%= f.password_field :points_planned %>
+    <%= f.text_field :points_planned %>
   </div>
   <div class="field">
     <%= f.label :defects_completed %><br />
-    <%= f.password_field :defects_completed %>
+    <%= f.text_field :defects_completed %>
   </div>
   <div class="field">
     <%= f.label :defects_incomplete %><br />
-    <%= f.password_field :defects_incomplete %>
+    <%= f.text_field :defects_incomplete %>
   </div>
   <div class="actions">
     <%= f.submit "Add" %>

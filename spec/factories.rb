@@ -4,4 +4,8 @@ FactoryGirl.define do
     password 'pass'
     password_confirmation 'pass'
   end
+
+  factory :iteration do
+
+  end
 end
