@@ -7,4 +7,6 @@ def login
   fill_in 'Password', with: "pass"
 
   click_button 'Login'
+
+  return user
 end

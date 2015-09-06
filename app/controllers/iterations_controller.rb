@@ -1,5 +1,6 @@
 class IterationsController < ApplicationController
   def index
+    @iterations = Iteration.all_by_descending_date
   end
 
   def show
