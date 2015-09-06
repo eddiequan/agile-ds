@@ -1,1 +1,26 @@
 <%= link_to "New iteration", new_iteration_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Iterations</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @iterations.each do |iteration| %>
+      <tr>
+        <td>Iteration <%= iteration.number %></td>
+        <td><%= iteration.points_done %></td>
+        <td><%= iteration.points_done_for_release %></td>
+        <td><%= iteration.points_planned %></td>
+        <td><%= iteration.defects_completed %></td>
+        <td><%= iteration.defects_incomplete %></td>
+        <td><%= link_to 'Show', iteration %></td>
+        <td><%= link_to 'Edit', edit_iteration_path(iteration) %></td>
+        <td><%= link_to 'Destroy', iteration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
