@@ -1,6 +1,7 @@
 class Iteration < ActiveRecord::Base
 
   validates :user_id, {presence: true}
+  validates_uniqueness_of :user_id, :scope => [:date]
   validates :date, {presence: true}
   validates :points_done, {presence: true}
   validates :points_done_for_release, {presence: true}

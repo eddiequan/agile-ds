@@ -13,7 +13,9 @@ class IterationsController < ApplicationController
   def create
     params = iteration_params.merge(user_id: current_user.id)
 
+    puts current_user.id
     @iteration = Iteration.new(params)
+    
     @iteration.save
 
     if @iteration.errors.present?
