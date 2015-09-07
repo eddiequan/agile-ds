@@ -18,7 +18,7 @@
         <td><%= iteration.defects_completed %></td>
         <td><%= iteration.defects_incomplete %></td>
         <td><%= link_to 'Show', iteration %></td>
-        <td><%= link_to 'Edit', edit_iteration_path(iteration) %></td>
+        <td><%= link_to 'Edit', [:edit, iteration] %></td>
         <td><%= link_to 'Destroy', iteration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
