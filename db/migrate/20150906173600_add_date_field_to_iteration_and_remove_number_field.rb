@@ -6,6 +6,5 @@ class AddDateFieldToIterationAndRemoveNumberField < ActiveRecord::Migration
 
   def down
     remove_column :iterations, :date, :date
-    add_column :iterations, :number, :integer
   end
 end
