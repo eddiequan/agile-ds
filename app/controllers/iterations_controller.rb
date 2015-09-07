@@ -30,7 +30,17 @@ class IterationsController < ApplicationController
   end
 
   def update
-    flash[:notice] = "Updated"
+    @iteration = Iteration.find(params[:id])
+
+    @iteration.update(iteration_params)
+
+    if @iteration.errors.present?
+      flash[:alert] = "Iteration update was not successful"
+    else
+      flash[:notice] = "The iteration was successfully updated"
+    end
+    redirect_to root_path
+
   end
 
   def destroy
